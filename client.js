@@ -2,14 +2,13 @@
 class MTProtoClient {
     constructor() {
         this.authKey = null;
-        this.socket = new WebSocket("wss://382zvb-79-139-134-245.ru.tuna.am/ws");
+        this.socket = new WebSocket("ws://m17hzg-79-139-134-245.ru.tuna.am/ws");
         this.socket.onmessage = (e) => this.handleMessage(e);
     }
-
     // Генерация auth_key (упрощённо)
     async generateAuthKey() {
         // В реальности здесь Diffie-Hellman с сервером
-        const response = await fetch("https://382zvb-79-139-134-245.ru.tuna.am/api/generate-key");
+        const response = await fetch("https://m17hzg-79-139-134-245.ru.tuna.am/api/generate-key");
         this.authKey = await response.arrayBuffer();
     }
 
