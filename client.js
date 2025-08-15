@@ -2,7 +2,7 @@
 class MTProtoClient {
     constructor() {
         this.authKey = null;
-        this.socket = new WebSocket("ws://m17hzg-79-139-134-245.ru.tuna.am/ws");
+        this.socket = new WebSocket("wss://m17hzg-79-139-134-245.ru.tuna.am/ws");
         this.socket.onmessage = (e) => this.handleMessage(e);
     }
     // Генерация auth_key (упрощённо)
