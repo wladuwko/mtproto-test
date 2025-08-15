@@ -9,7 +9,7 @@ class MTProtoClient {
     // Генерация auth_key (упрощённо)
     async generateAuthKey() {
         // В реальности здесь Diffie-Hellman с сервером
-        const response = await fetch("/api/generate-key");
+        const response = await fetch("https://382zvb-79-139-134-245.ru.tuna.am/api/generate-key");
         this.authKey = await response.arrayBuffer();
     }
 
